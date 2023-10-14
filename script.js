@@ -19,7 +19,6 @@ async function fetchMenuData() {
         price: item.pris,
         description: item.beskrivning,
         type: item.typ,
-        img: item.svImg
     }));
     sortAndRenderMenu();
     
@@ -89,15 +88,13 @@ function filterMenuByType(type) {
         filteredMenu = menuData;
     } else {
         filteredMenu = menuData.filter(item => item.type === type);
-
-    }
-    
+    }  
     // Get the current sorting order
-    const currentSortOption = priceSortSelect.value;
-    
+    const currentSortOption = priceSortSelect.value; 
     // Sort the filtered menu based on the sorting order
     sortAndRenderMenu(filteredMenu, currentSortOption);
 }
+
 
 
 // Event listener for food type selection
@@ -106,9 +103,9 @@ foodTypeSelect.addEventListener('change', function () {
     filterMenuByType(selectedType);
 });
 
-// Function to filter menu items by food allergies
 function filterMenuByAllergies(allergies) {
-    const filteredMenu = menu.filter(item => {
+    console.log("Filtering menu by allergies:", allergies);
+    const filteredMenu = menuData.filter(item => {
         // Check each item for allergies
         const itemAllergies = item.foodAllergies;
         for (const allergen in allergies) {
@@ -122,23 +119,26 @@ function filterMenuByAllergies(allergies) {
     renderMenu(filteredMenu);
 }
 
+
+
 // Event listener for allergy selection
 
 allergySelect.addEventListener('change', function () {
     const selectedAllergy = allergySelect.value;
-    
+
     if (selectedAllergy === 'none') {
-        populateEnglishMenu(menu); // Show all menu items if "None" selected
+        // Show all menu items if "None" is selected
+        sortAndRenderMenu();
     } else {
         // Create an object to represent selected allergies
         const allergies = {
-            nuts: selectedAllergy === 'nuts',
             dairy: selectedAllergy === 'dairy',
             gluten: selectedAllergy === 'gluten',
         };
-        filterMenuByAllergies(allergies);
+        filterMenuByAllergies(allergies); // Call the filtering function with the selected allergies
     }
 });
+
 
 // Function to update page content based on the selected language
 function updatePageContent(language) {
