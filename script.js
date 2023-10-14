@@ -104,7 +104,6 @@ foodTypeSelect.addEventListener('change', function () {
 });
 
 function filterMenuByAllergies(allergies) {
-    console.log("Filtering menu by allergies:", allergies);
     const filteredMenu = menuData.filter(item => {
         // Check each item for allergies
         const itemAllergies = item.foodAllergies;
