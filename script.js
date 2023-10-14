@@ -4,14 +4,12 @@ const priceSortSelect = document.getElementById('price-sort-select');
 const foodTypeSelect = document.getElementById('food-type-select');
 const allergySelect = document.getElementById('allergy-select');
 
-
 let menuData = [];
 let selectedLanguage = 'en'; // Default to English
 
-
 // Fetch menu data based on language
 async function fetchMenuData() {
-    const response = await fetch('data.json'); // Change to 'data.json'
+    const response = await fetch('data.json');
     const menuJson = await response.json();
     menuData = selectedLanguage === 'en' ? menuJson : menuJson.map(item => ({
         ...item,
@@ -20,32 +18,55 @@ async function fetchMenuData() {
         description: item.beskrivning,
         type: item.typ,
     }));
-    sortAndRenderMenu();
+
+    // Apply filters and sorting
+    applyFiltersAndSorting();
+}
+
+// Function to apply filters and sorting to the menu
+function applyFiltersAndSorting() {
+    const selectedType = foodTypeSelect.value;
+    const selectedAllergy = allergySelect.value;
+    const selectedPrice = priceSortSelect.value;
     
+    // Filter by type
+    let filteredMenu = menuData;
+    if (selectedType !== 'all') {
+        filteredMenu = filteredMenu.filter(item => item.type === selectedType);
+    }
+    
+    // Filter by allergies
+    if (selectedAllergy !== 'none') {
+        const allergies = {
+            dairy: selectedAllergy === 'dairy',
+            gluten: selectedAllergy === 'gluten',
+        };
+        
+        filteredMenu = filteredMenu.filter(item => {
+            const itemAllergies = item.foodAllergies;
+            for (const allergen in allergies) {
+                if (allergies[allergen] && itemAllergies[allergen]) {
+                    return false;
+                }
+            }
+            return true;
+        });
+    }
+    // Sort by price
+    if (selectedPrice === 'asc') {
+        filteredMenu.sort((a, b) => a.price - b.price);
+    } else if (selectedPrice === 'desc') {
+        filteredMenu.sort((a, b) => b.price - a.price);
+    }
+    
+    
+
+    // Sort and render
+    sortAndRenderMenu(filteredMenu);
 }
 
 // Function to sort and render the menu
-function sortAndRenderMenu(order) {
-    let sortedMenu = [...menuData];
-
-    sortedMenu.sort((a, b) => {
-        if (order === 'desc') {
-            return b.price - a.price; // Sort in ascending order
-        } else {
-            return a.price - b.price; // Sort in descending order
-        }
-        
-    });
-    const selectedType = foodTypeSelect.value;
-    if (selectedType !== 'all') {
-        sortedMenu = sortedMenu.filter(item => item.type === selectedType);
-    }
-
-    return renderMenu(sortedMenu);
-}
-
-// Function to populate the menu cards
-function renderMenu(menuItems) {
+function sortAndRenderMenu(menuItems) {
     menuContainer.innerHTML = '';
     menuItems.forEach(item => {
         const card = document.createElement('div');
@@ -64,79 +85,17 @@ function renderMenu(menuItems) {
 // Event listener for language selection
 languageSelect.addEventListener('change', function () {
     selectedLanguage = languageSelect.value;
-    fetchMenuData();
+    applyFiltersAndSorting();
     updatePageContent(selectedLanguage);
 });
 
-// Event listener for sorting by price
-priceSortSelect.addEventListener('change', function () {
-    const currentSortOption = priceSortSelect.value;
-    sortAndRenderMenu(currentSortOption);
-});
+// Event listeners for filtering and sorting
+foodTypeSelect.addEventListener('change', applyFiltersAndSorting);
+allergySelect.addEventListener('change', applyFiltersAndSorting);
+priceSortSelect.addEventListener('change', applyFiltersAndSorting);
 
 // Initial rendering of the menu
 fetchMenuData();
-
-
-
-
-// Function to filter menu items by food type
-function filterMenuByType(type) {
-    let filteredMenu;
-    
-    if (type === 'all') {
-        filteredMenu = menuData;
-    } else {
-        filteredMenu = menuData.filter(item => item.type === type);
-    }  
-    // Get the current sorting order
-    const currentSortOption = priceSortSelect.value; 
-    // Sort the filtered menu based on the sorting order
-    sortAndRenderMenu(filteredMenu, currentSortOption);
-}
-
-
-
-// Event listener for food type selection
-foodTypeSelect.addEventListener('change', function () {
-    const selectedType = foodTypeSelect.value;
-    filterMenuByType(selectedType);
-});
-
-function filterMenuByAllergies(allergies) {
-    const filteredMenu = menuData.filter(item => {
-        // Check each item for allergies
-        const itemAllergies = item.foodAllergies;
-        for (const allergen in allergies) {
-            if (allergies[allergen] && itemAllergies[allergen]) {
-                return false; 
-            }
-        }
-        return true; 
-    });
-
-    renderMenu(filteredMenu);
-}
-
-
-
-// Event listener for allergy selection
-
-allergySelect.addEventListener('change', function () {
-    const selectedAllergy = allergySelect.value;
-
-    if (selectedAllergy === 'none') {
-        // Show all menu items if "None" is selected
-        sortAndRenderMenu();
-    } else {
-        // Create an object to represent selected allergies
-        const allergies = {
-            dairy: selectedAllergy === 'dairy',
-            gluten: selectedAllergy === 'gluten',
-        };
-        filterMenuByAllergies(allergies); // Call the filtering function with the selected allergies
-    }
-});
 
 
 // Function to update page content based on the selected language

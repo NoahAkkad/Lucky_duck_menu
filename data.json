@@ -28,7 +28,7 @@
     "namn": "BIFF RYDBERG",
     "pris": 175,
     "beskrivning": "Tärnad oxfilé, potatis och gullök, serveras med dijonsenapskräm och rå äggula",
-    "typ": "biff",
+    "typ": "Nötkött",
     "svImg": "./images/RYDBERG_BEEF.jpeg"
 },
 {
@@ -44,7 +44,7 @@
     "namn": "SPICY CHEESEBURGER",
     "pris": 155,
     "beskrivning": "180gram högrevsburgare med sallad, tomat, picklade rödlök, cheddarost med jalapeños och barbecuesås i briochebröd med pommes och rökig ranch-aioli",
-    "typ": "biff",
+    "typ": "Nötkött",
     "svImg": "./images/SPICY_CHEESEBURGER.jpeg"
 },
 {
@@ -172,7 +172,7 @@
     "namn": "GRILLAD OXFILE",
     "pris": 259,
     "beskrivning": "200 gram oxfilé, rödvinssås, frästa grönsaker serveras med potatisgratäng (går att få med pommes och bearnaise)",
-    "typ": "biff",
+    "typ": "Nötkött",
     "svImg": "./images/GRILLED_BEEF_TENDERLOIN.jpeg"
 }
 ]
