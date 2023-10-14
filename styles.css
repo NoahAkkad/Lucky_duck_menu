@@ -1,0 +1,161 @@
+:root {
+    --color-card: #FFE17B;
+    --color-bar: #C51605;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-shadow: 0 0 3px #aaaaaa;
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  letter-spacing :0.1rem;
+}
+
+p {
+  text-wrap: wrap;
+  padding: 10px;
+  letter-spacing :0.1rem;
+}
+#priceElement {
+  font-weight: bold;
+  cursor: pointer;
+}
+#priceElement:hover {
+  color: #C51605;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif; 
+}
+
+/* Basic styling for the header */
+header {
+  background-color: var(--color-bar);
+  color: #fff;
+  position: fixed; 
+  width: 100%; 
+  z-index: 100; 
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%; 
+  gap: 20px;
+}
+
+.logo img{
+  margin-top: 5px;
+  height: 75px;
+}
+
+/* Styling for dropdowns */
+.language-dropdown,
+.food-type-dropdown,
+.price-sort-dropdown,
+.allergy-dropdown {
+  margin-right: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+}
+
+/* Styling for select elements */
+select {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Styling for the main content */
+main {
+  margin-top: 78px;
+  padding: 25px;
+  flex-grow: 1; /* Allow the main content to grow and push the footer down */
+  width: 100%;
+  background-image: url(./images/pexels-vincent-ma-janssen-1310777.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* Styling for individual menu cards */
+.menu-card {
+  background-color:var(--color-card);
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: grid;
+  justify-items: center;
+  align-items: center; 
+}
+
+.menu-card img{
+  height: 150px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the footer */
+footer {
+  background-color: var(--color-bar);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%; 
+}
+
+.social-media {
+  text-decoration: none;
+  margin-bottom: 10px;
+  
+}
+.social-media a{
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+}
+.social-media a:hover{
+  
+  color: var(--color-card);
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  nav select{
+    margin-top: 10px;
+  }
+  .allergy-dropdown{
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+nav {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left:20px;
+  padding-bottom: 10px; 
+}
+main{
+  margin-top: 319px;
+}
+}
+
+

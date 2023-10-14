@@ -1,0 +1,89 @@
+[
+{
+"namn":"FLÄSKFILÉPLANKA",
+"pris":149,
+"beskrivning":"Duchesse mos, rödvinssky, bearnaise och stekta grönsaker","typ":"fläsk",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/PORK_FILLET_PLATTER.jpg"
+},
+
+{
+"namn":"BIFF RYDBERG",
+"pris":175,
+"beskrivning":"Tärnad oxfilé, potatis och gullök, serveras med dijonsenapskräm och rå äggula",
+"typ":"biff",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":false},
+"img":"./images/RYDBERG_BEEF.jpeg"
+},
+
+{
+"namn":"SPICY CHEESEBURGER",
+"pris":155,
+"beskrivning":"180gram högrevsburgare med sallad, tomat, picklade rödlök, cheddarost med jalapeños och barbecuesås i briochebröd med pommes och rökig ranch-aioli",
+"typ":"biff",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/SPICY_CHEESEBURGER.jpeg"
+},
+
+{
+"namn":"HALLOUMI BURGARE","pris":155,
+"beskrivning":"Sallad, tomat, rödlök och guacamole i briochebröd med pommes och aioli",
+"typ":"veg",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/HALLOUMI_BURGER.jpeg"
+},
+
+{
+"namn":"FISH'N CHIPS",
+"pris":149,
+"beskrivning":"\"Beer-batter\" panerad torskrygg med dill-aioli, halstrad citron och pommes",
+"typ":"fisk",
+"foodAllergies":{"nuts":false,"dairy":false,"gluten":true},
+"img":"./images/FISH_AND_CHIPS.jpeg"
+},
+
+{
+"namn":"HUSETS SCHNITZEL",
+"pris":175,
+"beskrivning":"200 gram välbankad schnitzel \"Borås största\" med citron, kapris, anjovis, kryddsmör och rödvinssky serveras med stekt potatis","typ":"fläsk",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/HOUSE_SCHNITZEL.jpeg"
+},
+
+{
+"namn":"CAESARSALLAD",
+"pris":139,
+"beskrivning":"Varm kyckling, bacon, krutonger, parmesan samt caesardressing",
+"typ":"kyckling",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/CAESAR_SALAD.jpeg"},{"namn":"LAXSALLAD MED QUINOA","pris":159,
+"beskrivning":"Grillad lax med quinoa, cocktailtomater, blandsallad, morot julienne, rödlök med en vinägrett",
+"typ":"fisk",
+"foodAllergies":{"nuts":false,"dairy":false,"gluten":true},
+"img":"./images/SALMON_SALAD_WITH_QUINOA.jpeg"
+},
+
+{
+"namn":"KRÄMIG KYCKLING PASTA",
+"pris":169,
+"beskrivning":"Soltorkade tomater, basilika, grönsaker och parmesan","typ":"kyckling",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/CREAMY_CHICKEN_PASTA.jpeg"
+},
+{
+"namn":"MUSSLOR AL CAVA","pris":189,
+"beskrivning":"Ångkokta musslor i en krämig sås gjord på cava, toppas med cream fraîche och jalapeños, serveras med pommes och aioli",
+"typ":"fisk","foodAllergies":{"nuts":false,
+"dairy":true,"gluten":true},
+"img":"./images/MUSSELS_AL_CAVA.jpeg"
+},
+
+{
+"namn":"GRILLAD OXFILE",
+"pris":259,
+"beskrivning":"200 gram oxfilé, rödvinssås, frästa grönsaker serveras med potatisgratäng (går att få med pommes och bearnaise) GRILLED BEEF TENDERLOIN ",
+"typ":"biff",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/GRILLED_BEEF_TENDERLOIN.jpeg"
+}
+]

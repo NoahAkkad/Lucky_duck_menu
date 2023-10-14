@@ -1,0 +1,97 @@
+[
+{
+"name":"PORK FILLET PLATTER",
+"price":149,
+"description":"Duchesse mashed potatoes, red wine sauce, béarnaise, and fried vegetables",
+"type":"pork",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/PORK_FILLET_PLATTER.jpg"
+},
+
+{
+"name":"RYDBERG BEEF",
+"price":175,
+"description":"Diced beef fillet, potatoes, onions, served with Dijon mustard cream and raw egg yolk",
+"type":"beef",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":false},
+"img":"./images/RYDBERG_BEEF.jpeg"
+},
+
+{
+"name":"SPICY CHEESEBURGER",
+"price":155,
+"description":"180-gram chuck steak burger with lettuce, tomato, pickled red onions, cheddar cheese with jalapeños, and barbecue sauce in brioche bread, served with fries and smoky ranch aioli",
+"type":"beef",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/SPICY_CHEESEBURGER.jpeg"},
+
+{
+"name":"HALLOUMI BURGER",
+"price":155,
+"description":"Lettuce, tomato, red onion, and guacamole in brioche bread, served with fries and aioli",
+"type":"vegetarian",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/HALLOUMI_BURGER.jpeg"
+},
+
+{
+"name":"FISH AND CHIPS",
+"price":149,"description":"\"Beer-battered\" cod loin with dill aioli, pan-fried lemon, and fries",
+"type":"fish",
+"foodAllergies":{"nuts":false,"dairy":false,"gluten":true},
+"img":"./images/FISH_AND_CHIPS.jpeg"
+},
+
+{
+"name":"HOUSE SCHNITZEL",
+"price":175,
+"description":"200-gram well-pounded schnitzel \"Borås largest\" with lemon, capers, anchovies, herb butter, and red wine sauce, served with fried potatoes",
+"type":"pork",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/HOUSE_SCHNITZEL.jpeg"
+},
+
+{
+"name":"CAESAR SALAD",
+"price":139,
+"description":"Warm chicken, bacon, croutons, Parmesan cheese, and Caesar dressing",
+"type":"chicken",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/CAESAR_SALAD.jpeg"
+},
+
+{
+"name":"SALMON SALAD WITH QUINOA",
+"price":159,
+"description":"Grilled salmon with quinoa, cocktail tomatoes, mixed greens, carrot julienne, red onion with a vinaigrette",
+"type":"fish",
+"foodAllergies":{"nuts":false,"dairy":false,"gluten":true},
+"img":"./images/SALMON_SALAD_WITH_QUINOA.jpeg"
+},
+
+{
+"name":"CREAMY CHICKEN PASTA",
+"price":169,
+"description":"Sun-dried tomatoes, basil, vegetables, and Parmesan cheese","type":"chicken",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/CREAMY_CHICKEN_PASTA.jpeg"
+},
+
+{
+"name":"MUSSELS AL CAVA",
+"price":189,
+"description":"Steamed mussels in a creamy cava sauce, topped with crème fraîche and jalapeños, served with fries and aioli",
+"type":"fish",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/MUSSELS_AL_CAVA.jpeg"
+},
+
+{
+"name":"GRILLED BEEF TENDERLOIN",
+"price":259,
+"description":"200-gram beef tenderloin, red wine sauce, sautéed vegetables, served with potato gratin (available with fries and béarnaise sauce)",
+"type":"beef",
+"foodAllergies":{"nuts":false,"dairy":true,"gluten":true},
+"img":"./images/GRILLED_BEEF_TENDERLOIN.jpeg"
+}
+]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="./images/Lucky_duck2.png" alt=""></div>
+            <div class="language-dropdown">
+                <label for="language-select" id="language-label">Language</label>
+                <select id="language-select">
+                    <option value="en" id="language-en">English</option>
+                    <option value="sv" id="language-sv">Swedish</option>
+                </select>
+            </div>
+            <div class="food-type-dropdown">
+                <label for="food-type-select" id="food-type-label">Food Type</label>
+                <select id="food-type-select">
+                    <option value="all" id="all-option">All</option>
+                    <option value="beef" id="beef-option">Beef</option>
+                    <option value="fish" id="fish-option">Fish</option>
+                    <option value="chicken" id="chicken-option">Chicken</option>
+                    <option value="vegetarian" id="vegetarian-option">Vegetarian</option>
+                </select>
+            </div>
+            <div class="price-sort-dropdown">
+                <label for="price-sort-select" id="price-sort-label">Price Sorting</label>
+                <select id="price-sort-select">
+                    <option value="asc" id="asc">Price: Low to High</option>
+                    <option value="desc" id="desc">Price: High to Low</option>
+                </select>
+            </div>
+            <div class="allergy-dropdown">
+                <label for="allergy-select" id="allergy-label">Filter by Allergies</label>
+                <select id="allergy-select">
+                    <option value="none" id="allergy-none">None</option>
+                    <option value="nuts" id="allergy-nuts">Nuts</option>
+                    <option value="dairy" id="allergy-dairy">Dairy</option>
+                    <option value="gluten" id="allergy-gluten">Gluten</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="menu-container" id="menu-container">
+            <!-- Menu items will be dynamically generated here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-media"> 
+            <span><a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></span>
+            <span><a href="#"><i class="fa-brands fa-youtube fa-2xl"></i></a></span>
+            <span><a href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a></span>
+            <span><a href="#"><i class="fa-solid fa-phone fa-2xl"></i></a></span>
+        </div>
+        <div class="contact">
+            <p>Address: Nasaret 111 11</p>
+            <p>Sweden</p>
+            <p>Telephone number: 000 00 00 000</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/4e4df2bb8b.js" crossorigin="anonymous"></script>
+    <!-- I add type="module" to work import from json -->
+    <script src="script.js" type="module"></script>
+</body>
+</html>
