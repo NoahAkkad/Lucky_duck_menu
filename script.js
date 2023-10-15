@@ -18,8 +18,6 @@ async function fetchMenuData() {
         description: item.beskrivning,
         type: item.typ,
     }));
-
-    // Apply filters and sorting
     applyFiltersAndSorting();
 }
 
@@ -38,7 +36,7 @@ function applyFiltersAndSorting() {
     // Filter by allergies
     if (selectedAllergy !== 'none') {
         const allergies = {
-            dairy: selectedAllergy === 'dairy',
+            lactose: selectedAllergy === 'lactose',
             gluten: selectedAllergy === 'gluten',
         };
         
@@ -58,9 +56,6 @@ function applyFiltersAndSorting() {
     } else if (selectedPrice === 'desc') {
         filteredMenu.sort((a, b) => b.price - a.price);
     }
-    
-    
-
     // Sort and render
     sortAndRenderMenu(filteredMenu);
 }
@@ -155,15 +150,3 @@ function updatePageContent(language) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
