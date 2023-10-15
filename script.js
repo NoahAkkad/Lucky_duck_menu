@@ -18,11 +18,8 @@ async function fetchMenuData() {
         description: item.beskrivning,
         type: item.typ,
     }));
-
-    // Apply filters and sorting
     applyFiltersAndSorting();
 }
-
 // Function to apply filters and sorting to the menu
 function applyFiltersAndSorting() {
     const selectedType = foodTypeSelect.value;
@@ -38,7 +35,7 @@ function applyFiltersAndSorting() {
     // Filter by allergies
     if (selectedAllergy !== 'none') {
         const allergies = {
-            dairy: selectedAllergy === 'dairy',
+            lactose: selectedAllergy === 'lactose',
             gluten: selectedAllergy === 'gluten',
         };
         
@@ -58,9 +55,6 @@ function applyFiltersAndSorting() {
     } else if (selectedPrice === 'desc') {
         filteredMenu.sort((a, b) => b.price - a.price);
     }
-    
-    
-
     // Sort and render
     sortAndRenderMenu(filteredMenu);
 }
@@ -96,7 +90,6 @@ priceSortSelect.addEventListener('change', applyFiltersAndSorting);
 
 // Initial rendering of the menu
 fetchMenuData();
-
 
 // Function to update page content based on the selected language
 function updatePageContent(language) {
@@ -155,15 +148,3 @@ function updatePageContent(language) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
